@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Clash Display Semibold";
+    src: url("../fonts/ClashDisplay-Semibold.otf");
+}
+@font-face {
+    font-family: "Clash Display Regular";
+    src: url("../fonts/ClashDisplay-Regular.otf");
+}
+
+
+/* In your global styles or main CSS file */
+body {
+    font-family: 'Clash Display Semibold', sans-serif;
+  }
+
+  body {
+    font-family: 'Clash Display Regular', sans-serif;
+  }
+.leading-zero{
+  line-height: 0.8;
+}
+  
