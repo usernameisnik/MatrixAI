@@ -6,6 +6,31 @@
     <title>MatrixAI</title>
     <link href="../dist/output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add your existing styles here */
+        #history {
+            max-height: 300px; /* Set a maximum height for the chat history */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        .message {
+            padding: 10px;
+            margin-bottom: 10px;
+            max-width: 80%;
+        }
+
+        .user {
+            background-color: #4a5568;
+            color: #ffffff;
+            align-self: flex-end;
+        }
+
+        .chatbot {
+            background-color: #cbd5e0;
+            color: #1a202c;
+            align-self: flex-start;
+        }
+    </style>
 </head>
 <body class="w-full h-full bg-black ">
     <div class="flex gap-7 ml-32    mt-10">
@@ -25,7 +50,7 @@
                 <p class="font-clash text-3xl text-white">MatrixAI</p>
                 <p class="font-clash text-white mt-3">v1.0</p>
             </div>
-            <div class="history"></div>
+            <div id="history" class="text-xl text-white font-clashreg"></div>
             <div class="border-fuchsia-300 border-solid border-2 w-[271px] h-[618px] pt-[550px] pl-11">
                 <button class="flex  h-10 justify-start items-center  gap-5 absolute " >
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -61,11 +86,12 @@
             </div>
             <p id="output" class="border-fuchsia-300 border border-solid"></p>
             <div class="w-[990px] h-[70px] rounded-3xl bg-zinc-600 mt-[380px] ml-6 flex gap-6 px-5 " >
-                <input class="w-[800px] bg-transparent outline-none text-white text-2xl " placeholder="enter a prompt">
-                <button class="w-[150px] h-[40px] rounded-3xl border border-solid border-orange-600 bg-orange-600 hover:bg-orange-500 mt-4" id="submit">
+                <input class="w-[800px] bg-transparent outline-none text-white text-2xl " placeholder="enter a prompt" id="prompt">
+                <button class="w-[150px] h-[40px] rounded-3xl border border-solid border-orange-600 bg-orange-600 hover:bg-orange-500 mt-4" id="submit" onclick="processUserInput()">
                     <p class="font-clashsb text-xl">GO</p>
                 </button>
             </div>
         </div>
     </div>
+    <script src="../app.js"></script>
 </body>

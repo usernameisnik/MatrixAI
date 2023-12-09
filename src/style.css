@@ -1,0 +1,15 @@
+body{
+    background-image: url("../assets/BG\ Vid.mp4");
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #C7BA1E, #9D2B82);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.text-gradient-pink {
+    background: linear-gradient(45deg, #FF95FF, #C65849);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
