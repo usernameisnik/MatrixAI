@@ -6,9 +6,52 @@
     <title>MatrixAI</title>
     <link href="../dist/output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js"></script>
+    <!-- Add this script tag to the head of your HTML to include the Firebase SDK with module support -->
+<script type="module">
+  
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js';
+  import { getAuth, signInWithPopup, GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js';
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+  apiKey: "AIzaSyCf-TSPRd-SmK_CRHk_piQWVKfjU5jGgXg",
+  authDomain: "matrixai-e9eda.firebaseapp.com",
+  projectId: "matrixai-e9eda",
+  storageBucket: "matrixai-e9eda.appspot.com",
+  messagingSenderId: "448450632766",
+  appId: "1:448450632766:web:bc076b16c3bfecd657456f"
+};
+
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  // Create a Google authentication provider
+  const provider = new GoogleAuthProvider();
+
+  // Attach click event to a button to trigger Google sign-in
+  document.getElementById('googleSignInButton').addEventListener('click', () => {
+    // Sign in with Google using a pop-up window
+    const auth = getAuth(app);
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // User signed in successfully
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error(error);
+      });
+  });
+</script>
 </head>
 <body class="bg-black">
-    <div class="w-[1534px] h-[88.68px] pl-2 bg-neutral-900 bg-opacity-60 backdrop-blur-lg justify-center items-center gap-[279.64px] inline-flex">
+ 
+
+    <div class="w-full h-full pl-2 bg-neutral-900 bg-opacity-60 backdrop-blur-lg justify-center items-center gap-[279.64px] inline-flex">
         <div class="w-[207.73px] h-[47.14px] justify-center items-center gap-[11.19px] flex">
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
                 <path d="M0.647949 1.36152C0.647949 0.920268 1.00566 0.562561 1.44691 0.562561H8.03488C8.3916 0.562561 8.7051 0.799035 8.8031 1.14203L11.4383 10.3652C11.6105 10.9679 11.0533 11.5251 10.4506 11.3529L1.22742 8.71771C0.884423 8.61971 0.647949 8.30621 0.647949 7.94949V1.36152Z" fill="white"/>
@@ -27,39 +70,39 @@
         </div>
         <div class="px-4 justify-center items-center gap-[51.13px] flex">
           <div class="w-[82.29px] h-[34.36px] pr-[0.29px] pb-[0.36px] justify-center items-center flex">
-            <div class="text-center text-white text-[28.03px] font-normal font-clash leading-zero">About</div>
+            <a class="text-center text-white text-[28.03px] font-normal font-clash leading-zero">About</a>
           </div>
           <div class="w-[82.29px] h-[34.36px] pl-[2.40px] pr-[2.90px] justify-center items-center flex">
-            <div class="text-center text-white text-[28.03px] font-normal font-clash leading-zero">Team</div>
+            <a class="text-center text-white text-[28.03px] font-normal font-clash leading-zero">Team</a>
           </div>
           <div class="w-[56.73px] h-[34.36px] justify-center items-center flex">
-            <div class="text-center text-white text-[28.03px] font-normal font-clash leading-zero">Blog</div>
+            <a class="text-center text-white text-[28.03px] font-normal font-clash leading-zero">Blog</a>
           </div>
         </div>
         <div class="justify-end items-center gap-[15.18px] flex">
-          <div class="h-[47.18px] px-[37.55px] py-[9.59px] rounded-tl-[3.20px] rounded-tr-[22.37px] rounded-bl-[22.37px] rounded-br-[3.20px] border border-fuchsia-300 justify-center items-center flex">
+          <button class="h-[47.18px] px-[37.55px] py-[9.59px] rounded-tl-[3.20px] rounded-tr-[22.37px] rounded-bl-[22.37px] rounded-br-[3.20px] border border-fuchsia-300 justify-center items-center flex">
             <div class="text-center text-fuchsia-300 text-[22.37px] font-normal font-clash leading-zero">Log in</div>
-          </div>
-          <div class="p-[9.59px] bg-white rounded-tl-[3.20px] rounded-tr-[22.37px] rounded-bl-[22.37px] rounded-br-[3.20px] justify-center items-center flex">
+          </button>
+          <button class="p-[9.59px] bg-white rounded-tl-[3.20px] rounded-tr-[22.37px] rounded-bl-[22.37px] rounded-br-[3.20px] justify-center items-center flex">
             <div class="text-center text-neutral-900 text-[22.37px] font-normal font-clash leading-zero">Try MatrixAI</div>
-          </div>
+          </button>
         </div>
     </div>
     <div class="m-11">
     <div class="w-[1445.32px] h-[627.18px] justify-start items-start gap-[242.08px] inline-flex">
-        <div class="flex-col justify-start items-start gap-[50px] inline-flex">
-          <div class="w-[699.09px] h-[280.43px] pl-1 pr-[114.25px] pb-[103.07px] justify-start items-center inline-flex">
+        <div class="flex-col justify-start items-start gap-[25px] inline-flex">
+          <div class="w-[699.09px] h-[280.43px] pl-1 pr-[100px] pb-[50px] justify-start items-center inline-flex">
             <div class="grow shrink basis-0 self-stretch pt-[51.93px] justify-center items-center inline-flex">
               <div class="self-stretch flex-col justify-start items-start inline-flex">
                 <div class="w-[582.44px] text-white text-[57.53px] font-medium font-clash leading-zero">Check-out<br/>the NEXT GEN</div>
-                <div class="text-yellow-500 text-[88.43px] font-semibold font-clash leading-zero">GenerativeAI</div>
+                <div class="text-yellow-500 text-[88.43px] font-extrabold font-clash leading-zero">GenerativeAI</div>
               </div>
             </div>
           </div>
           <div class="w-[701.49px] h-[247.68px] pr-[0.49px] pt-[21.57px] pb-[14.92px] justify-center items-center inline-flex">
             <div class="self-stretch flex-col justify-start items-start gap-[5.59px] inline-flex">
               <div class="w-[697.49px] text-white text-4xl font-semibold font-clash leading-zero">The All-New</div>
-              <div class="text-fuchsia-300 text-[150px] font-semibold font-clash leading-zero">MatrixAI</div>
+              <div class="text-fuchsia-300 text-[150px] font-extrabold font-clash leading-zero">MatrixAI</div>
               <div class="text-white text-4xl font-medium font-['JetBrains Mono'] tracking-widest">Explore infinite possibilities</div>
             </div>
           </div>
@@ -89,7 +132,7 @@
             <div class="w-[431.44px] h-[65.51px] left-0 top-0 absolute bg-purple-400 rounded-lg shadow backdrop-blur-[37.71px] group-hover:bg-purple-600"></div>
             <div class="left-[177.37px] top-[18.38px] absolute text-center text-neutral-800 text-2xl font-semibold font-clash leading-zero group-hover::text-neutral-800">Sign In</div>
           </button>
-          <button class="w-[431.44px] h-[65.51px] relative group">
+          <button class="w-[431.44px] h-[65.51px] relative group" id="googleSignInButton">
             <div class="w-[431.44px] h-[65.51px] left-0 top-0 absolute bg-zinc-100 rounded-lg shadow backdrop-blur-[37.71px] group-hover:bg-zinc-500"></div>
             <div class="w-[262.34px] h-[29px] left-[83.09px] top-[17.58px] absolute justify-start items-start gap-[13.58px] inline-flex">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -103,9 +146,10 @@
           </button>
           <div class="w-[431.44px] h-[65.51px] relative">
             <div class="w-[431.44px] h-[65.51px] left-0 top-0 absolute bg-neutral-900 rounded-lg shadow backdrop-blur-[37.71px]"></div>
-            <div class="left-[107.06px] top-[18.38px] absolute text-center text-neutral-100 text-2xl font-semibold font-clash leading-zero">Create an account</div>
+            <a class="left-[107.06px] top-[18.38px] absolute text-center text-neutral-100 text-2xl font-semibold font-clash leading-zero" href="">Create an account</a>
           </div>
         </div>
       </div>
       </div>
+      
 </body>

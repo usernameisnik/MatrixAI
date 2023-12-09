@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatrixAI</title>
+    <link href="../dist/output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="w-full h-full bg-black ">
+    <div class="flex gap-7 ml-32    mt-10">
+        <div class="gap-2 flex flex-col ">
+            <div class="w-[271.50px] h-[67.50px] bg-zinc-900 rounded-tl-[27px] border border-fuchsia-300 flex gap-2 justify-center items-center" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <path d="M0.5 1.35705C0.5 1.01612 0.776378 0.739746 1.11731 0.739746H6.20744C6.48306 0.739746 6.72528 0.922455 6.801 1.18747L8.83705 8.31365C8.9701 8.77932 8.53957 9.20984 8.07391 9.0768L0.947721 7.04074C0.682709 6.96503 0.5 6.7228 0.5 6.44719V1.35705Z" fill="white"/>
+                    <rect x="0.5" y="9.38202" width="6.17308" height="6.17308" rx="3.08654" fill="white"/>
+                    <path d="M0.5 18.49C0.5 18.2144 0.682709 17.9721 0.94772 17.8964L8.07391 15.8604C8.53957 15.7273 8.9701 16.1578 8.83705 16.6235L6.801 23.7497C6.72528 24.0147 6.48306 24.1974 6.20744 24.1974H1.11731C0.776378 24.1974 0.5 23.921 0.5 23.5801V18.49Z" fill="white"/>
+                    <rect x="9.14233" y="0.739746" width="6.17308" height="6.17308" rx="3.08654" fill="white"/>
+                    <rect x="9.14233" y="9.38202" width="6.17308" height="6.17308" rx="3.08654" fill="white"/>
+                    <rect x="9.14233" y="18.0244" width="6.17308" height="6.17308" rx="3.08654" fill="white"/>
+                    <path d="M17.6567 1.18747C17.7325 0.922456 17.9747 0.739746 18.2503 0.739746H23.3404C23.6814 0.739746 23.9577 1.01612 23.9577 1.35705V6.44719C23.9577 6.7228 23.775 6.96503 23.51 7.04074L16.3838 9.0768C15.9182 9.20984 15.4876 8.77932 15.6207 8.31365L17.6567 1.18747Z" fill="white"/>
+                    <rect x="17.7847" y="9.38202" width="6.17308" height="6.17308" rx="3.08654" fill="white"/>
+                    <path d="M15.6207 16.6235C15.4876 16.1578 15.9182 15.7273 16.3838 15.8604L23.51 17.8964C23.775 17.9721 23.9577 18.2144 23.9577 18.49V23.5801C23.9577 23.921 23.6814 24.1974 23.3404 24.1974H18.2503C17.9747 24.1974 17.7325 24.0147 17.6567 23.7497L15.6207 16.6235Z" fill="white"/>
+                </svg>
+                <p class="font-clash text-3xl text-white">MatrixAI</p>
+                <p class="font-clash text-white mt-3">v1.0</p>
+            </div>
+            <div class="history"></div>
+            <div class="border-fuchsia-300 border-solid border-2 w-[271px] h-[618px] pt-[550px] pl-11">
+                <button class="flex  h-10 justify-start items-center  gap-5 absolute " >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M39.75 19.9417C39.75 30.9183 30.8517 39.8167 19.875 39.8167C8.89834 39.8167 0 30.9183 0 19.9417C0 8.96499 8.89834 0.0666504 19.875 0.0666504C30.8517 0.0666504 39.75 8.96499 39.75 19.9417ZM19.3377 20.4787H9.66882V19.4044H19.3377V9.7355H20.412V19.4044H31.1553V20.4787H20.412V31.222H19.3377V20.4787Z" fill="url(#paint0_linear_81_191)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_81_191" x1="19.875" y1="0.0666504" x2="19.875" y2="39.8167" gradientUnits="userSpaceOnUse">
+                        <stop offset="0.240362" stop-color="#FF95FF"/>
+                        <stop offset="1" stop-color="#FBBC05"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                    <p class="font-clashreg text-2xl not-italic font-semibold leading-normal text-white">New Chat</p>
+                </button>    
+            </div>
+        </div>
+        <div class="w-[1045.5px] h-[694.5px] rounded-tr-3xl border-2 border-solid border-fuchsia-300">
+            <div class="flex gap-14 mt-10 items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="87" height="87" viewBox="0 0 87 87" fill="none">
+                    <path d="M0 1.45484C0 0.660521 0.64392 0.0166016 1.43824 0.0166016H21.6241C22.2663 0.0166016 22.8306 0.442287 23.007 1.05972L31.0814 29.32C31.3913 30.4049 30.3883 31.4079 29.3034 31.098L1.04312 23.0236C0.425684 22.8472 0 22.2829 0 21.6407V1.45484Z" fill="white"/>
+                    <rect y="31.8091" width="22.709" height="22.709" rx="8.62941" fill="white"/>
+                    <path d="M0 64.6866C0 64.0445 0.425685 63.4802 1.04312 63.3037L29.3034 55.2294C30.3883 54.9194 31.3913 55.9225 31.0814 57.0074L23.007 85.2676C22.8306 85.8851 22.2663 86.3108 21.6241 86.3108H1.43824C0.64392 86.3108 0 85.6668 0 84.8725V64.6866Z" fill="white"/>
+                    <rect x="31.7925" y="0.0166016" width="22.709" height="22.709" rx="11.3545" fill="white"/>
+                    <rect x="31.7925" y="31.8091" width="22.709" height="22.709" rx="11.3545" fill="white"/>
+                    <rect x="31.7925" y="63.6018" width="22.709" height="22.709" rx="8.62941" fill="white"/>
+                    <path d="M63.2873 1.05972C63.4637 0.442286 64.028 0.0166016 64.6702 0.0166016H84.856C85.6504 0.0166016 86.2943 0.660521 86.2943 1.45484V21.6407C86.2943 22.2829 85.8686 22.8472 85.2512 23.0236L56.9909 31.098C55.906 31.4079 54.9029 30.4049 55.2129 29.32L63.2873 1.05972Z" fill="white"/>
+                    <rect x="63.585" y="31.8091" width="22.709" height="22.709" rx="8.62941" fill="white"/>
+                    <path d="M55.2129 57.0074C54.9029 55.9225 55.906 54.9194 56.9909 55.2294L85.2512 63.3037C85.8686 63.4802 86.2943 64.0445 86.2943 64.6866V84.8725C86.2943 85.6668 85.6504 86.3108 84.856 86.3108H64.6702C64.028 86.3108 63.4637 85.8851 63.2873 85.2676L55.2129 57.0074Z" fill="white"/>
+                </svg>
+                <div class="flex flex-col text-white  ">
+                    <p class="font-clash text-6xl not-italic leading-normal font-medium">What brings you here?</p>
+                    <p class="font-clash text-2xl not-italic leading-normal font-medium">Try prompting "what can you do?</p>
+                </div>
+            </div>
+            <p id="output" class="border-fuchsia-300 border border-solid"></p>
+            <div class="w-[990px] h-[70px] rounded-3xl bg-zinc-600 mt-[380px] ml-6 flex gap-6 px-5 " >
+                <input class="w-[800px] bg-transparent outline-none text-white text-2xl " placeholder="enter a prompt">
+                <button class="w-[150px] h-[40px] rounded-3xl border border-solid border-orange-600 bg-orange-600 hover:bg-orange-500 mt-4" id="submit">
+                    <p class="font-clashsb text-xl">GO</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
